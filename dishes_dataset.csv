@@ -1,0 +1,301 @@
+dish_name,dish_type,ingredients,dosha_suitable_for,avoids_for,taste_profile,effect,season
+Mint Pasta,Dinner,"cauliflower, wheat, moong dal, oats, carrot","Kapha, Pitta, Vata",,"Bitter, Salty",warming,Winter
+Garlic Sandwich,Breakfast,"spinach, ghee, capsicum, peas, broccoli","Kapha, Pitta, Vata",,"Salty, Sour",light,All
+Herbal Salad,Snack,"moong dal, ginger, tomato, ragi, ghee","Kapha, Pitta, Vata",,"Astringent, Salty",grounding,Monsoon
+Mixed Veg Sprouts Bowl,Dinner,"peas, masoor dal, pumpkin, paneer, ragi","Pitta, Vata",Kapha,"Bitter, Pungent",light,All
+Homestyle Upma,Dinner,"cauliflower, ragi, beans, masoor dal, ginger",Vata,"Kapha, Pitta","Bitter, Astringent",stabilizing,All
+Spicy Stir Fry,Dinner,"capsicum, garlic, coconut, beans, moong dal","Kapha, Pitta, Vata",,"Sweet, Pungent",grounding,Monsoon
+Seasonal Kofta,Breakfast,"broccoli, paneer, cabbage, wheat, moong dal","Pitta, Vata",Kapha,"Pungent, Sweet",grounding,Winter
+Protein-Rich Stir Fry,Breakfast,"carrot, lentils, potato, moong dal, ghee",Pitta,"Kapha, Vata","Pungent, Astringent",light,Summer
+Homestyle Kofta,Lunch,"garlic, pumpkin, cauliflower, lentils, spinach","Kapha, Pitta, Vata",,"Bitter, Astringent",stabilizing,All
+Ayurvedic Dosa,Snack,"beans, garlic, moong dal, ragi, wheat","Kapha, Vata",Pitta,"Salty, Astringent",cooling,Monsoon
+Protein-Rich Idli,Snack,"paneer, moong dal, oats, toor dal, onion","Kapha, Pitta, Vata",,"Sour, Salty",grounding,All
+Ginger Idli,Snack,"rice, carrot, onion, millet, masoor dal","Kapha, Pitta, Vata",,"Salty, Pungent",light,All
+Homestyle Sabzi,Dinner,"sweet potato, onion, ginger, coconut, carrot",Pitta,"Kapha, Vata","Sour, Salty",energizing,Summer
+Masala Stew,Snack,"moong dal, oats, rice, ginger, capsicum","Kapha, Pitta, Vata",,"Astringent, Sweet",energizing,Summer
+Classic Dosa,Dinner,"rice, millet, oats, pumpkin, sweet potato","Kapha, Pitta, Vata",,"Sweet, Astringent",energizing,Summer
+Lemon Curry Bowl,Dinner,"potato, sweet potato, lentils, cauliflower, oats","Kapha, Pitta",Vata,"Bitter, Pungent",light,Summer
+Mild Snack Mix,Lunch,"ghee, cabbage, onion, ragi, sweet potato","Kapha, Pitta, Vata",,"Sour, Astringent",warming,Summer
+Green Soup,Dinner,"toor dal, pumpkin, sweet potato, ragi, coconut","Pitta, Vata",Kapha,"Bitter, Astringent",light,Monsoon
+Warming Paratha,Lunch,"potato, coconut, moong dal, peas, millet","Kapha, Pitta, Vata",,"Astringent, Salty",grounding,Monsoon
+Ayurvedic Salad,Snack,"ragi, onion, potato, broccoli, peas","Kapha, Pitta",Vata,"Sweet, Astringent",light,Winter
+Lemon Stir Fry,Lunch,"millet, rice, beans, moong dal, paneer",Vata,"Kapha, Pitta","Pungent, Sour",stabilizing,Summer
+Classic Dal,Snack,"coconut, rice, millet, tomato, beetroot","Pitta, Vata",Kapha,"Sour, Astringent",stabilizing,All
+Light Thali,Breakfast,"capsicum, carrot, peas, tomato, ginger","Kapha, Pitta, Vata",,"Salty, Pungent",light,All
+Warming Soup,Dinner,"onion, toor dal, oats, broccoli, beetroot","Pitta, Vata",Kapha,"Bitter, Astringent",stabilizing,All
+Traditional Paratha,Lunch,"wheat, potato, onion, ginger, garlic","Kapha, Pitta, Vata",,"Pungent, Sweet",stabilizing,All
+Fresh Cutlet,Lunch,"cauliflower, onion, moong dal, garlic, capsicum","Kapha, Vata",Pitta,"Salty, Bitter",stabilizing,Monsoon
+Ayurvedic Kadhi,Dinner,"capsicum, coconut, toor dal, sweet potato, rice",Vata,"Kapha, Pitta","Sour, Astringent",warming,Winter
+Traditional Veg Gravy,Breakfast,"beetroot, rice, ginger, onion, capsicum","Kapha, Pitta, Vata",,"Sour, Bitter",energizing,Summer
+Traditional Roll,Breakfast,"toor dal, spinach, tomato, moong dal, millet","Kapha, Vata",Pitta,"Bitter, Salty",cooling,Winter
+Traditional Chutney,Breakfast,"beans, paneer, ragi, ghee, moong dal",Kapha,"Pitta, Vata","Pungent, Sweet",light,Monsoon
+Traditional Khichdi,Dinner,"toor dal, coconut, tomato, millet, paneer",Pitta,"Kapha, Vata","Bitter, Sour",energizing,All
+Green Sambar,Snack,"masoor dal, garlic, oats, paneer, coconut","Pitta, Vata",Kapha,"Sour, Astringent",light,Monsoon
+Green Curry Bowl,Snack,"wheat, carrot, broccoli, onion, potato","Kapha, Vata",Pitta,"Bitter, Sweet",light,All
+Ginger Khichdi,Lunch,"millet, broccoli, cauliflower, cabbage, rice",Pitta,"Kapha, Vata","Pungent, Bitter",energizing,Monsoon
+Coconut Rice Bowl,Breakfast,"sweet potato, spinach, moong dal, rice, carrot","Kapha, Vata",Pitta,"Salty, Bitter",grounding,Winter
+Seasonal Veg Gravy,Dinner,"paneer, ginger, beetroot, pumpkin, tomato",Pitta,"Kapha, Vata","Sweet, Salty",warming,Summer
+Ayurvedic Sambar,Snack,"onion, carrot, peas, ragi, beetroot",Kapha,"Pitta, Vata","Bitter, Sour",stabilizing,Winter
+Classic Tikki,Breakfast,"cabbage, broccoli, tomato, lentils, ragi",Pitta,"Kapha, Vata","Pungent, Bitter",cooling,Monsoon
+Herbal Rice Bowl,Dinner,"moong dal, rice, pumpkin, beans, spinach",Kapha,"Pitta, Vata","Sweet, Salty",cooling,Winter
+Mint Stew,Lunch,"ghee, millet, onion, ginger, beetroot","Kapha, Pitta",Vata,"Sweet, Sour",cooling,Monsoon
+Herbal Khichdi,Lunch,"beans, millet, wheat, potato, onion","Kapha, Pitta, Vata",,"Pungent, Salty",warming,Summer
+Warming Kofta,Snack,"sweet potato, lentils, peas, cauliflower, beans",Pitta,"Kapha, Vata","Astringent, Salty",energizing,Summer
+Lemon Lentil Soup,Dinner,"onion, capsicum, potato, millet, oats","Kapha, Pitta, Vata",,"Sweet, Bitter",stabilizing,Summer
+Herbal Vegetable Curry,Snack,"peas, beans, garlic, potato, ghee","Kapha, Pitta, Vata",,"Bitter, Sweet",energizing,Summer
+Fresh Paratha,Breakfast,"oats, broccoli, sweet potato, paneer, beans","Pitta, Vata",Kapha,"Sour, Sweet",cooling,Winter
+Masala Wrap,Lunch,"peas, garlic, pumpkin, cauliflower, tomato","Pitta, Vata",Kapha,"Pungent, Bitter",light,Winter
+Protein-Rich Dosa,Breakfast,"peas, lentils, capsicum, toor dal, cabbage","Kapha, Pitta, Vata",,"Salty, Sweet",cooling,Winter
+Herbal Upma,Lunch,"carrot, cabbage, spinach, toor dal, potato","Kapha, Pitta",Vata,"Sweet, Salty",stabilizing,Winter
+Seasonal Chutney,Breakfast,"capsicum, millet, pumpkin, tomato, ginger","Kapha, Pitta",Vata,"Salty, Sweet",stabilizing,Summer
+Mint Salad,Lunch,"coconut, beetroot, oats, beans, toor dal","Kapha, Pitta",Vata,"Salty, Astringent",energizing,All
+Ginger Stew,Snack,"garlic, peas, spinach, carrot, pumpkin",Pitta,"Kapha, Vata","Salty, Sweet",cooling,All
+Cooling Chutney,Breakfast,"onion, pumpkin, sweet potato, lentils, spinach","Kapha, Pitta, Vata",,"Pungent, Astringent",warming,All
+Cooling Soup,Snack,"peas, cauliflower, masoor dal, capsicum, onion","Pitta, Vata",Kapha,"Pungent, Bitter",light,Summer
+Fresh Soup,Dinner,"ragi, garlic, carrot, tomato, beans",Kapha,"Pitta, Vata","Astringent, Bitter",stabilizing,Monsoon
+Herbal Kadhi,Dinner,"wheat, peas, beans, cauliflower, carrot",Kapha,"Pitta, Vata","Astringent, Salty",stabilizing,Summer
+Lemon Kadhi,Breakfast,"carrot, masoor dal, broccoli, oats, coconut","Kapha, Pitta, Vata",,"Pungent, Bitter",cooling,Monsoon
+Homestyle Rasam,Breakfast,"capsicum, ghee, garlic, pumpkin, beetroot","Kapha, Pitta, Vata",,"Sweet, Sour",grounding,All
+Coconut Soup,Snack,"peas, carrot, ragi, ghee, capsicum",Pitta,"Kapha, Vata","Astringent, Sweet",energizing,Summer
+Spicy Paratha,Lunch,"tomato, millet, ginger, wheat, moong dal",Pitta,"Kapha, Vata","Sour, Bitter",stabilizing,Winter
+Light Sambar,Dinner,"broccoli, wheat, capsicum, beetroot, carrot","Kapha, Vata",Pitta,"Sour, Sweet",energizing,Monsoon
+Mild Wrap,Lunch,"paneer, garlic, capsicum, moong dal, cabbage",Vata,"Kapha, Pitta","Astringent, Bitter",light,Summer
+Homestyle Paneer Curry,Breakfast,"beetroot, garlic, cabbage, spinach, ginger","Kapha, Pitta",Vata,"Salty, Bitter",stabilizing,Monsoon
+Spicy Dal,Dinner,"capsicum, oats, garlic, ghee, peas","Kapha, Pitta, Vata",,"Pungent, Sour",light,All
+Ginger Sandwich,Snack,"millet, sweet potato, ginger, onion, oats","Kapha, Pitta, Vata",,"Astringent, Salty",cooling,Monsoon
+Cooling Paratha,Lunch,"capsicum, masoor dal, coconut, wheat, ghee",Kapha,"Pitta, Vata","Salty, Bitter",cooling,All
+Ginger Pasta,Snack,"beetroot, peas, rice, ghee, coconut","Kapha, Pitta",Vata,"Astringent, Sour",stabilizing,All
+Garlic Pasta,Dinner,"carrot, paneer, spinach, potato, ragi",Pitta,"Kapha, Vata","Sour, Bitter",warming,Winter
+Classic Soup,Snack,"wheat, ragi, coconut, lentils, potato","Kapha, Pitta, Vata",,"Pungent, Sweet",light,Monsoon
+Homestyle Soup,Dinner,"millet, lentils, oats, masoor dal, rice",Kapha,"Pitta, Vata","Salty, Sour",cooling,All
+Mint Cutlet,Snack,"beetroot, cauliflower, garlic, rice, beans",Vata,"Kapha, Pitta","Salty, Sweet",grounding,Monsoon
+Spicy Sambar,Lunch,"rice, toor dal, beetroot, wheat, paneer",Vata,"Kapha, Pitta","Salty, Bitter",energizing,Monsoon
+Mixed Veg Lentil Soup,Dinner,"rice, tomato, toor dal, millet, beans",Kapha,"Pitta, Vata","Pungent, Astringent",grounding,Monsoon
+Mild Paneer Curry,Breakfast,"ghee, rice, wheat, broccoli, coconut","Kapha, Pitta",Vata,"Astringent, Sweet",warming,All
+Homestyle Khichdi,Lunch,"peas, beans, ghee, toor dal, tomato","Kapha, Pitta, Vata",,"Sour, Pungent",light,Winter
+Mint Wrap,Dinner,"millet, paneer, garlic, ginger, lentils","Kapha, Pitta, Vata",,"Pungent, Sweet",warming,Winter
+Ayurvedic Sprouts Bowl,Dinner,"carrot, oats, lentils, onion, moong dal","Pitta, Vata",Kapha,"Astringent, Bitter",cooling,All
+Protein-Rich Kadhi,Lunch,"pumpkin, beetroot, peas, moong dal, spinach","Kapha, Pitta",Vata,"Sweet, Salty",stabilizing,Summer
+Spicy Tikki,Dinner,"potato, ragi, beans, carrot, millet","Kapha, Pitta, Vata",,"Sweet, Sour",warming,Winter
+Mixed Veg Pulao,Dinner,"coconut, oats, carrot, spinach, tomato","Kapha, Vata",Pitta,"Sweet, Astringent",grounding,Winter
+Ayurvedic Roll,Dinner,"oats, rice, paneer, sweet potato, masoor dal","Kapha, Vata",Pitta,"Salty, Sour",stabilizing,Winter
+Traditional Veg Stir Fry,Lunch,"rice, cauliflower, sweet potato, capsicum, moong dal","Pitta, Vata",Kapha,"Bitter, Salty",energizing,Winter
+Ayurvedic Upma,Breakfast,"beans, oats, ragi, ginger, broccoli","Pitta, Vata",Kapha,"Astringent, Bitter",energizing,All
+Homestyle Paratha,Breakfast,"masoor dal, lentils, paneer, potato, beans","Kapha, Vata",Pitta,"Pungent, Bitter",light,All
+Fresh Paneer Curry,Snack,"moong dal, cabbage, sweet potato, millet, spinach","Pitta, Vata",Kapha,"Salty, Astringent",grounding,Summer
+Homestyle Biryani,Dinner,"paneer, peas, beetroot, ghee, spinach","Pitta, Vata",Kapha,"Sour, Astringent",cooling,Monsoon
+Mixed Veg Poha,Breakfast,"beetroot, wheat, ginger, masoor dal, peas","Kapha, Pitta",Vata,"Salty, Bitter",energizing,Winter
+Warming Cutlet,Dinner,"toor dal, oats, peas, ragi, ghee","Kapha, Pitta, Vata",,"Sour, Astringent",energizing,All
+Coconut Sandwich,Lunch,"potato, garlic, oats, peas, spinach","Kapha, Pitta, Vata",,"Astringent, Salty",cooling,Monsoon
+Seasonal Kadhi,Dinner,"ginger, cauliflower, carrot, pumpkin, tomato",Vata,"Kapha, Pitta","Pungent, Sweet",warming,All
+Lemon Idli,Breakfast,"garlic, masoor dal, capsicum, peas, beetroot","Kapha, Vata",Pitta,"Salty, Pungent",grounding,Winter
+Mixed Veg Snack Mix,Dinner,"sweet potato, paneer, masoor dal, beans, cabbage",Vata,"Kapha, Pitta","Sweet, Bitter",energizing,Summer
+Ayurvedic Vegetable Curry,Dinner,"moong dal, paneer, ragi, carrot, beetroot","Kapha, Pitta, Vata",,"Salty, Bitter",light,Summer
+Masala Sabzi,Dinner,"ragi, cauliflower, toor dal, tomato, moong dal","Pitta, Vata",Kapha,"Pungent, Bitter",stabilizing,Monsoon
+Mild Pulao,Snack,"onion, moong dal, cauliflower, cabbage, masoor dal","Kapha, Vata",Pitta,"Sour, Sweet",grounding,All
+Traditional Curry Bowl,Breakfast,"pumpkin, millet, wheat, cauliflower, coconut","Kapha, Pitta, Vata",,"Astringent, Salty",stabilizing,All
+Homestyle Stuffed Paratha,Breakfast,"carrot, broccoli, ragi, spinach, oats",Pitta,"Kapha, Vata","Salty, Bitter",warming,Monsoon
+Mild Stew,Dinner,"moong dal, beans, wheat, cabbage, ginger","Pitta, Vata",Kapha,"Bitter, Astringent",warming,Winter
+Light Soup,Lunch,"garlic, spinach, coconut, cabbage, wheat",Pitta,"Kapha, Vata","Bitter, Pungent",energizing,All
+Fresh Curry Bowl,Snack,"ginger, wheat, cabbage, cauliflower, ghee","Kapha, Pitta, Vata",,"Bitter, Sweet",grounding,Monsoon
+Classic Upma,Breakfast,"oats, paneer, coconut, moong dal, capsicum","Kapha, Pitta, Vata",,"Sweet, Pungent",grounding,Monsoon
+Ginger Snack Mix,Dinner,"rice, onion, cabbage, peas, ragi",Kapha,"Pitta, Vata","Sweet, Pungent",grounding,Winter
+Seasonal Idli,Breakfast,"pumpkin, toor dal, beetroot, sweet potato, garlic","Kapha, Pitta, Vata",,"Salty, Bitter",warming,Monsoon
+Spicy Pasta,Breakfast,"wheat, tomato, rice, beetroot, peas",Vata,"Kapha, Pitta","Sour, Bitter",grounding,Monsoon
+Fresh Stuffed Paratha,Snack,"pumpkin, millet, toor dal, masoor dal, cabbage","Pitta, Vata",Kapha,"Sweet, Pungent",warming,Winter
+Coconut Roti Sabzi,Dinner,"beans, capsicum, oats, millet, ragi","Kapha, Pitta, Vata",,"Astringent, Sweet",energizing,Winter
+Light Dosa,Breakfast,"tomato, cauliflower, beetroot, oats, moong dal","Kapha, Pitta",Vata,"Bitter, Astringent",cooling,Monsoon
+Ayurvedic Sabzi,Snack,"lentils, tomato, garlic, pumpkin, masoor dal","Kapha, Pitta, Vata",,"Pungent, Bitter",stabilizing,Monsoon
+Homestyle Roti Sabzi,Dinner,"tomato, beans, onion, broccoli, oats",Pitta,"Kapha, Vata","Sour, Bitter",warming,Winter
+Ginger Porridge,Snack,"ghee, masoor dal, pumpkin, capsicum, ragi","Pitta, Vata",Kapha,"Salty, Sour",light,Monsoon
+Herbal Thali,Lunch,"moong dal, carrot, ginger, beans, oats",Pitta,"Kapha, Vata","Sweet, Pungent",stabilizing,Winter
+Ginger Roll,Snack,"toor dal, cabbage, cauliflower, coconut, oats","Kapha, Vata",Pitta,"Sour, Salty",cooling,Winter
+Coconut Curry Bowl,Snack,"capsicum, oats, paneer, sweet potato, lentils",Kapha,"Pitta, Vata","Sweet, Sour",cooling,Winter
+Coconut Porridge,Breakfast,"wheat, cabbage, rice, tomato, garlic","Kapha, Pitta, Vata",,"Pungent, Astringent",energizing,Summer
+Fresh Dal,Lunch,"cauliflower, sweet potato, beetroot, tomato, ginger","Kapha, Pitta, Vata",,"Pungent, Salty",grounding,Monsoon
+Light Idli,Dinner,"moong dal, carrot, tomato, lentils, potato","Kapha, Pitta, Vata",,"Astringent, Sweet",warming,Monsoon
+Light Veg Stir Fry,Breakfast,"moong dal, masoor dal, beetroot, ragi, pumpkin",Vata,"Kapha, Pitta","Bitter, Sour",stabilizing,Summer
+Mint Stir Fry,Breakfast,"lentils, tomato, cauliflower, cabbage, onion",Pitta,"Kapha, Vata","Astringent, Pungent",energizing,All
+Mint Poha,Breakfast,"moong dal, beans, cauliflower, paneer, sweet potato","Kapha, Pitta, Vata",,"Pungent, Astringent",warming,Summer
+Mint Dosa,Snack,"onion, peas, millet, spinach, rice","Pitta, Vata",Kapha,"Bitter, Pungent",cooling,Monsoon
+Mixed Veg Idli,Lunch,"garlic, coconut, pumpkin, tomato, moong dal","Kapha, Vata",Pitta,"Salty, Sour",warming,All
+Green Upma,Lunch,"broccoli, rice, beetroot, pumpkin, onion",Kapha,"Pitta, Vata","Bitter, Pungent",stabilizing,Monsoon
+Masala Pasta,Dinner,"beetroot, pumpkin, ginger, lentils, moong dal","Kapha, Pitta",Vata,"Pungent, Astringent",warming,Monsoon
+Warming Stuffed Paratha,Snack,"millet, oats, toor dal, wheat, capsicum","Kapha, Pitta, Vata",,"Pungent, Sour",grounding,Winter
+Classic Khichdi,Breakfast,"cauliflower, spinach, carrot, paneer, beetroot","Kapha, Vata",Pitta,"Pungent, Salty",cooling,Winter
+Garlic Khichdi,Breakfast,"ghee, coconut, garlic, carrot, millet","Kapha, Pitta, Vata",,"Pungent, Bitter",light,Monsoon
+Light Khichdi,Breakfast,"peas, broccoli, pumpkin, capsicum, ginger","Pitta, Vata",Kapha,"Bitter, Salty",energizing,All
+Cooling Roll,Snack,"beans, millet, potato, carrot, ragi","Kapha, Vata",Pitta,"Pungent, Sour",grounding,Monsoon
+Ayurvedic Paneer Curry,Snack,"wheat, garlic, lentils, cabbage, moong dal","Kapha, Vata",Pitta,"Sweet, Sour",warming,Winter
+Light Cutlet,Snack,"garlic, spinach, capsicum, potato, masoor dal",Vata,"Kapha, Pitta","Pungent, Sweet",warming,Monsoon
+Ayurvedic Sandwich,Breakfast,"peas, carrot, lentils, millet, potato",Pitta,"Kapha, Vata","Sour, Astringent",energizing,All
+Coconut Dosa,Lunch,"garlic, lentils, peas, paneer, cabbage","Kapha, Pitta, Vata",,"Sour, Pungent",cooling,All
+Traditional Porridge,Breakfast,"millet, lentils, ginger, potato, oats","Kapha, Pitta, Vata",,"Sweet, Pungent",warming,Winter
+Coconut Cutlet,Breakfast,"potato, lentils, sweet potato, carrot, cauliflower",Kapha,"Pitta, Vata","Salty, Astringent",stabilizing,Monsoon
+Spicy Rice Bowl,Breakfast,"cauliflower, beetroot, oats, rice, onion","Kapha, Pitta, Vata",,"Salty, Astringent",light,Winter
+Traditional Paneer Curry,Breakfast,"beetroot, onion, paneer, potato, moong dal","Kapha, Pitta, Vata",,"Bitter, Salty",cooling,All
+Garlic Porridge,Snack,"rice, ghee, onion, capsicum, oats","Kapha, Pitta, Vata",,"Astringent, Bitter",energizing,All
+Garlic Salad,Dinner,"rice, coconut, tomato, beetroot, garlic","Kapha, Pitta",Vata,"Astringent, Pungent",light,Winter
+Lemon Stew,Snack,"millet, moong dal, garlic, onion, carrot","Kapha, Pitta, Vata",,"Astringent, Sweet",light,Monsoon
+Lemon Upma,Dinner,"oats, cauliflower, coconut, toor dal, ginger","Pitta, Vata",Kapha,"Sour, Pungent",cooling,All
+Ginger Soup,Breakfast,"masoor dal, oats, peas, toor dal, paneer","Kapha, Pitta, Vata",,"Astringent, Sweet",light,All
+Lemon Tikki,Breakfast,"peas, lentils, rice, cabbage, beetroot",Pitta,"Kapha, Vata","Salty, Astringent",energizing,Summer
+Fresh Sandwich,Dinner,"ginger, moong dal, tomato, sweet potato, beans","Kapha, Pitta, Vata",,"Sweet, Salty",energizing,Summer
+Cooling Cutlet,Dinner,"lentils, carrot, millet, sweet potato, broccoli","Kapha, Pitta",Vata,"Astringent, Bitter",stabilizing,Summer
+Ginger Rasam,Snack,"millet, onion, masoor dal, paneer, wheat","Kapha, Pitta, Vata",,"Sour, Astringent",energizing,Winter
+Light Rasam,Dinner,"cabbage, broccoli, rice, toor dal, ghee",Pitta,"Kapha, Vata","Sweet, Bitter",stabilizing,Winter
+Mint Thali,Snack,"moong dal, cauliflower, oats, potato, peas","Kapha, Pitta, Vata",,"Astringent, Sweet",energizing,Winter
+Green Stuffed Paratha,Snack,"cabbage, beetroot, ghee, millet, lentils","Kapha, Pitta",Vata,"Salty, Bitter",cooling,All
+Mild Chutney,Dinner,"wheat, potato, toor dal, carrot, peas","Kapha, Vata",Pitta,"Astringent, Sour",cooling,Winter
+Seasonal Khichdi,Snack,"lentils, coconut, cauliflower, oats, wheat",Vata,"Kapha, Pitta","Sweet, Sour",stabilizing,Summer
+Lemon Kofta,Lunch,"moong dal, lentils, potato, masoor dal, onion","Kapha, Vata",Pitta,"Sweet, Astringent",cooling,Monsoon
+Herbal Sprouts Bowl,Dinner,"coconut, beans, millet, spinach, pumpkin","Kapha, Pitta",Vata,"Salty, Sweet",stabilizing,Monsoon
+Herbal Soup,Dinner,"ginger, ragi, cabbage, toor dal, carrot","Kapha, Vata",Pitta,"Pungent, Salty",warming,All
+Mixed Veg Stuffed Paratha,Snack,"masoor dal, coconut, millet, spinach, ghee",Pitta,"Kapha, Vata","Astringent, Sweet",cooling,All
+Traditional Cutlet,Dinner,"garlic, millet, coconut, oats, cauliflower",Pitta,"Kapha, Vata","Pungent, Sweet",stabilizing,Summer
+Ginger Upma,Breakfast,"peas, carrot, toor dal, tomato, beetroot","Pitta, Vata",Kapha,"Bitter, Pungent",grounding,All
+Spicy Kadhi,Lunch,"ragi, oats, masoor dal, onion, wheat","Kapha, Pitta, Vata",,"Astringent, Salty",grounding,Monsoon
+Ginger Pulao,Snack,"garlic, masoor dal, beetroot, sweet potato, ginger","Kapha, Pitta, Vata",,"Sour, Salty",grounding,Winter
+Homestyle Sprouts Bowl,Lunch,"peas, capsicum, ghee, millet, garlic","Kapha, Pitta, Vata",,"Sweet, Pungent",stabilizing,Summer
+Mild Tikki,Breakfast,"cauliflower, toor dal, spinach, pumpkin, millet","Pitta, Vata",Kapha,"Bitter, Pungent",cooling,All
+Traditional Stuffed Paratha,Snack,"ginger, broccoli, millet, carrot, spinach","Kapha, Vata",Pitta,"Astringent, Sweet",stabilizing,All
+Garlic Kadhi,Lunch,"masoor dal, pumpkin, wheat, ginger, beans","Kapha, Pitta, Vata",,"Salty, Astringent",cooling,Summer
+Light Upma,Lunch,"coconut, cauliflower, peas, carrot, spinach",Kapha,"Pitta, Vata","Pungent, Sweet",energizing,All
+Ginger Sabzi,Dinner,"wheat, beetroot, broccoli, spinach, oats","Kapha, Pitta",Vata,"Pungent, Sweet",grounding,All
+Fresh Sprouts Bowl,Snack,"capsicum, garlic, sweet potato, toor dal, cauliflower","Kapha, Pitta, Vata",,"Sweet, Sour",stabilizing,All
+Ginger Veg Gravy,Lunch,"beans, ginger, millet, carrot, lentils","Kapha, Pitta, Vata",,"Pungent, Astringent",stabilizing,All
+Classic Vegetable Curry,Dinner,"beans, sweet potato, moong dal, peas, tomato","Pitta, Vata",Kapha,"Astringent, Sweet",cooling,All
+Masala Rasam,Dinner,"moong dal, lentils, ginger, paneer, ghee",Pitta,"Kapha, Vata","Bitter, Pungent",energizing,Monsoon
+Lemon Poha,Dinner,"lentils, garlic, cauliflower, broccoli, coconut",Vata,"Kapha, Pitta","Salty, Sour",warming,Monsoon
+Warming Pasta,Breakfast,"cabbage, wheat, coconut, carrot, millet","Kapha, Vata",Pitta,"Salty, Pungent",light,Winter
+Warming Curry Bowl,Dinner,"onion, toor dal, garlic, lentils, peas","Pitta, Vata",Kapha,"Bitter, Sweet",grounding,Monsoon
+Homestyle Lentil Soup,Snack,"toor dal, cauliflower, spinach, cabbage, onion",Kapha,"Pitta, Vata","Astringent, Bitter",cooling,Summer
+Masala Veg Stir Fry,Snack,"rice, pumpkin, onion, ragi, cabbage","Kapha, Pitta, Vata",,"Astringent, Sour",stabilizing,Winter
+Homestyle Veg Gravy,Breakfast,"oats, wheat, moong dal, garlic, cauliflower","Kapha, Pitta, Vata",,"Sour, Sweet",light,All
+Coconut Stew,Lunch,"paneer, beans, peas, cabbage, carrot",Vata,"Kapha, Pitta","Sour, Salty",warming,Monsoon
+Traditional Pasta,Snack,"masoor dal, ragi, sweet potato, ginger, oats",Pitta,"Kapha, Vata","Salty, Bitter",grounding,All
+Light Kofta,Snack,"potato, ginger, millet, ghee, oats",Pitta,"Kapha, Vata","Bitter, Sour",stabilizing,All
+Spicy Khichdi,Lunch,"moong dal, spinach, toor dal, coconut, garlic","Pitta, Vata",Kapha,"Sweet, Salty",light,Summer
+Protein-Rich Paneer Curry,Breakfast,"oats, capsicum, masoor dal, paneer, ginger","Kapha, Vata",Pitta,"Astringent, Sweet",grounding,Monsoon
+Classic Roti Sabzi,Lunch,"potato, paneer, cabbage, spinach, rice",Kapha,"Pitta, Vata","Astringent, Salty",energizing,Summer
+Mint Paratha,Lunch,"capsicum, ghee, peas, lentils, potato","Kapha, Pitta",Vata,"Pungent, Sour",energizing,Winter
+Green Kadhi,Breakfast,"lentils, garlic, coconut, rice, wheat","Kapha, Pitta",Vata,"Astringent, Bitter",energizing,All
+Garlic Rice Bowl,Snack,"pumpkin, cauliflower, garlic, lentils, carrot","Kapha, Vata",Pitta,"Sour, Salty",warming,Summer
+Homestyle Dosa,Lunch,"ginger, potato, millet, cauliflower, carrot","Pitta, Vata",Kapha,"Bitter, Pungent",energizing,Monsoon
+Garlic Dal,Breakfast,"paneer, beans, coconut, toor dal, potato","Kapha, Pitta, Vata",,"Sweet, Salty",cooling,Winter
+Mild Roti Sabzi,Dinner,"wheat, coconut, spinach, broccoli, tomato","Pitta, Vata",Kapha,"Salty, Sour",grounding,All
+Light Salad,Lunch,"rice, ginger, moong dal, beans, capsicum","Kapha, Pitta, Vata",,"Bitter, Astringent",cooling,Winter
+Spicy Vegetable Curry,Snack,"rice, pumpkin, carrot, toor dal, moong dal","Kapha, Pitta, Vata",,"Bitter, Sweet",warming,Winter
+Mild Porridge,Lunch,"oats, peas, paneer, lentils, broccoli","Kapha, Vata",Pitta,"Sweet, Salty",warming,Summer
+Fresh Biryani,Dinner,"cabbage, ragi, tomato, potato, cauliflower","Kapha, Pitta",Vata,"Sweet, Pungent",energizing,Monsoon
+Coconut Wrap,Lunch,"ghee, garlic, moong dal, peas, sweet potato","Pitta, Vata",Kapha,"Salty, Bitter",light,Winter
+Protein-Rich Stuffed Paratha,Lunch,"rice, moong dal, carrot, ghee, sweet potato","Kapha, Pitta, Vata",,"Bitter, Salty",cooling,Summer
+Ginger Thali,Breakfast,"millet, potato, onion, garlic, wheat","Kapha, Pitta",Vata,"Astringent, Sweet",cooling,All
+Protein-Rich Soup,Breakfast,"carrot, rice, broccoli, garlic, ghee",Kapha,"Pitta, Vata","Pungent, Sour",grounding,Winter
+Fresh Chutney,Snack,"beans, oats, sweet potato, tomato, potato",Kapha,"Pitta, Vata","Astringent, Sour",cooling,Winter
+Herbal Porridge,Dinner,"cauliflower, onion, ginger, beetroot, toor dal","Kapha, Vata",Pitta,"Sweet, Salty",light,Monsoon
+Cooling Stew,Breakfast,"rice, ragi, cabbage, potato, cauliflower",Vata,"Kapha, Pitta","Pungent, Astringent",warming,Monsoon
+Warming Tikki,Dinner,"wheat, onion, sweet potato, beans, masoor dal","Kapha, Pitta, Vata",,"Pungent, Salty",stabilizing,Monsoon
+Lemon Sambar,Dinner,"beans, garlic, moong dal, millet, onion","Kapha, Pitta, Vata",,"Pungent, Sour",cooling,Winter
+Ginger Paratha,Lunch,"broccoli, toor dal, sweet potato, coconut, beetroot","Kapha, Pitta, Vata",,"Sweet, Sour",light,Monsoon
+Fresh Roll,Dinner,"onion, masoor dal, millet, moong dal, paneer",Kapha,"Pitta, Vata","Astringent, Bitter",light,Winter
+Garlic Soup,Dinner,"potato, moong dal, paneer, cabbage, millet","Kapha, Pitta, Vata",,"Astringent, Sweet",energizing,Monsoon
+Cooling Kadhi,Snack,"cabbage, ghee, paneer, carrot, ragi","Pitta, Vata",Kapha,"Sweet, Astringent",warming,Winter
+Mild Rice Bowl,Breakfast,"rice, tomato, capsicum, wheat, lentils",Pitta,"Kapha, Vata","Pungent, Salty",warming,Monsoon
+Mint Stuffed Paratha,Snack,"cauliflower, rice, garlic, wheat, masoor dal","Pitta, Vata",Kapha,"Sour, Salty",grounding,Winter
+Homestyle Vegetable Curry,Dinner,"coconut, peas, ragi, carrot, masoor dal",Kapha,"Pitta, Vata","Bitter, Sour",grounding,All
+Classic Cutlet,Dinner,"millet, cauliflower, wheat, cabbage, carrot",Kapha,"Pitta, Vata","Astringent, Bitter",energizing,Monsoon
+Protein-Rich Sabzi,Lunch,"rice, capsicum, ragi, cauliflower, garlic","Kapha, Pitta, Vata",,"Salty, Astringent",stabilizing,Monsoon
+Homestyle Sambar,Snack,"ghee, moong dal, carrot, tomato, ragi","Kapha, Pitta, Vata",,"Salty, Astringent",grounding,All
+Light Roti Sabzi,Breakfast,"capsicum, beetroot, toor dal, wheat, sweet potato","Pitta, Vata",Kapha,"Astringent, Pungent",warming,Summer
+Warming Kadhi,Dinner,"ragi, cabbage, millet, potato, rice","Pitta, Vata",Kapha,"Sour, Pungent",grounding,Summer
+Garlic Curry Bowl,Lunch,"capsicum, ghee, wheat, masoor dal, peas",Vata,"Kapha, Pitta","Salty, Pungent",stabilizing,Winter
+Green Roti Sabzi,Lunch,"sweet potato, cauliflower, paneer, cabbage, moong dal","Kapha, Pitta",Vata,"Pungent, Sweet",energizing,All
+Mild Veg Stir Fry,Snack,"carrot, cauliflower, pumpkin, wheat, coconut","Kapha, Pitta, Vata",,"Salty, Astringent",cooling,Monsoon
+Green Rice Bowl,Lunch,"paneer, ginger, beetroot, broccoli, tomato","Kapha, Pitta, Vata",,"Astringent, Bitter",warming,Summer
+Classic Stew,Dinner,"broccoli, sweet potato, millet, toor dal, moong dal","Pitta, Vata",Kapha,"Salty, Astringent",stabilizing,All
+Mixed Veg Roll,Snack,"garlic, sweet potato, cabbage, carrot, toor dal","Kapha, Vata",Pitta,"Sweet, Pungent",light,All
+Homestyle Sandwich,Breakfast,"coconut, beetroot, ginger, ragi, ghee","Kapha, Pitta, Vata",,"Bitter, Astringent",cooling,All
+Ginger Poha,Breakfast,"beetroot, lentils, peas, ginger, onion","Kapha, Vata",Pitta,"Salty, Bitter",light,Monsoon
+Spicy Curry Bowl,Lunch,"paneer, masoor dal, capsicum, ragi, beetroot","Kapha, Pitta, Vata",,"Astringent, Bitter",grounding,All
+Mild Paratha,Breakfast,"tomato, onion, beans, paneer, capsicum",Kapha,"Pitta, Vata","Pungent, Bitter",grounding,Winter
+Classic Stuffed Paratha,Dinner,"potato, capsicum, beetroot, carrot, pumpkin","Pitta, Vata",Kapha,"Sour, Astringent",warming,Summer
+Ginger Sprouts Bowl,Snack,"cabbage, carrot, cauliflower, tomato, coconut",Kapha,"Pitta, Vata","Bitter, Astringent",energizing,Monsoon
+Light Paratha,Breakfast,"cauliflower, pumpkin, oats, spinach, broccoli",Vata,"Kapha, Pitta","Bitter, Sweet",cooling,Summer
+Warming Salad,Breakfast,"ginger, broccoli, onion, paneer, millet","Kapha, Pitta, Vata",,"Salty, Bitter",warming,Summer
+Classic Poha,Snack,"masoor dal, cauliflower, broccoli, beetroot, peas","Kapha, Vata",Pitta,"Sour, Sweet",stabilizing,Monsoon
+Traditional Dal,Breakfast,"cabbage, oats, garlic, ragi, pumpkin",Vata,"Kapha, Pitta","Sour, Sweet",cooling,Winter
+Cooling Lentil Soup,Lunch,"sweet potato, potato, rice, carrot, masoor dal","Pitta, Vata",Kapha,"Pungent, Sour",warming,Monsoon
+Protein-Rich Sambar,Dinner,"oats, toor dal, capsicum, ragi, coconut",Vata,"Kapha, Pitta","Sour, Bitter",warming,Monsoon
+Fresh Vegetable Curry,Lunch,"spinach, millet, wheat, pumpkin, toor dal","Kapha, Vata",Pitta,"Salty, Astringent",light,Winter
+Warming Porridge,Snack,"onion, rice, peas, cabbage, ginger",Kapha,"Pitta, Vata","Salty, Astringent",warming,All
+Ayurvedic Snack Mix,Snack,"capsicum, onion, beetroot, masoor dal, potato",Vata,"Kapha, Pitta","Astringent, Salty",cooling,Monsoon
+Cooling Biryani,Snack,"rice, beans, garlic, toor dal, coconut","Kapha, Pitta, Vata",,"Salty, Sweet",grounding,Summer
+Traditional Idli,Breakfast,"lentils, millet, oats, garlic, carrot","Pitta, Vata",Kapha,"Sweet, Astringent",stabilizing,Summer
+Garlic Tikki,Breakfast,"wheat, moong dal, ragi, spinach, ghee",Kapha,"Pitta, Vata","Salty, Sour",cooling,All
+Classic Idli,Lunch,"spinach, ragi, carrot, millet, toor dal",Pitta,"Kapha, Vata","Salty, Sweet",energizing,Monsoon
+Masala Rice Bowl,Snack,"onion, coconut, peas, rice, spinach","Kapha, Pitta, Vata",,"Astringent, Pungent",cooling,Winter
+Lemon Wrap,Breakfast,"cauliflower, pumpkin, onion, beetroot, sweet potato",Kapha,"Pitta, Vata","Sour, Astringent",cooling,All
+Protein-Rich Vegetable Curry,Dinner,"broccoli, beetroot, masoor dal, tomato, capsicum",Pitta,"Kapha, Vata","Pungent, Bitter",warming,All
+Ayurvedic Stew,Lunch,"masoor dal, oats, lentils, potato, paneer","Kapha, Vata",Pitta,"Salty, Pungent",grounding,Monsoon
+Seasonal Paratha,Dinner,"ghee, onion, spinach, rice, ginger","Kapha, Pitta, Vata",,"Salty, Bitter",light,Summer
+Coconut Veg Gravy,Lunch,"masoor dal, sweet potato, rice, paneer, cabbage",Vata,"Kapha, Pitta","Sour, Astringent",warming,Monsoon
+Green Stir Fry,Snack,"broccoli, masoor dal, spinach, lentils, ginger",Pitta,"Kapha, Vata","Pungent, Bitter",energizing,Monsoon
+Lemon Chutney,Lunch,"cabbage, beetroot, broccoli, spinach, lentils","Kapha, Pitta, Vata",,"Sweet, Astringent",grounding,Summer
+Light Vegetable Curry,Snack,"masoor dal, sweet potato, beetroot, oats, spinach","Pitta, Vata",Kapha,"Bitter, Sweet",grounding,Summer
+Seasonal Stew,Breakfast,"potato, masoor dal, peas, pumpkin, paneer","Kapha, Vata",Pitta,"Bitter, Salty",light,Winter
+Lemon Paneer Curry,Breakfast,"paneer, garlic, lentils, capsicum, ginger","Kapha, Pitta, Vata",,"Sour, Pungent",energizing,Winter
+Masala Dal,Dinner,"peas, cabbage, spinach, capsicum, broccoli",Vata,"Kapha, Pitta","Bitter, Sour",stabilizing,Summer
+Mild Upma,Breakfast,"peas, broccoli, masoor dal, millet, paneer","Kapha, Pitta, Vata",,"Bitter, Sour",warming,Summer
+Green Stew,Snack,"pumpkin, onion, coconut, sweet potato, masoor dal","Pitta, Vata",Kapha,"Bitter, Pungent",energizing,Monsoon
+Coconut Salad,Breakfast,"peas, coconut, ghee, onion, moong dal","Kapha, Pitta",Vata,"Astringent, Sour",cooling,Summer
+Light Paneer Curry,Dinner,"beans, carrot, sweet potato, spinach, paneer","Kapha, Pitta",Vata,"Astringent, Salty",warming,Winter
+Masala Cutlet,Breakfast,"beetroot, ginger, moong dal, coconut, carrot",Pitta,"Kapha, Vata","Astringent, Pungent",cooling,All
+Spicy Cutlet,Dinner,"lentils, toor dal, carrot, broccoli, cauliflower","Kapha, Vata",Pitta,"Sweet, Pungent",stabilizing,Monsoon
+Mint Sandwich,Breakfast,"ginger, broccoli, onion, capsicum, toor dal","Kapha, Pitta, Vata",,"Bitter, Astringent",light,Winter
+Coconut Thali,Lunch,"beetroot, pumpkin, paneer, tomato, rice","Kapha, Pitta",Vata,"Astringent, Sour",warming,Summer
+Homestyle Idli,Lunch,"coconut, broccoli, moong dal, oats, masoor dal",Kapha,"Pitta, Vata","Pungent, Bitter",warming,Summer
+Ayurvedic Porridge,Lunch,"beetroot, paneer, carrot, onion, millet","Pitta, Vata",Kapha,"Salty, Sweet",light,Summer
+Mixed Veg Curry Bowl,Snack,"ginger, wheat, cauliflower, potato, sweet potato","Kapha, Pitta",Vata,"Astringent, Salty",stabilizing,Monsoon
+Seasonal Sprouts Bowl,Snack,"tomato, ginger, potato, paneer, toor dal","Kapha, Vata",Pitta,"Salty, Sour",stabilizing,Summer
+Classic Sabzi,Breakfast,"toor dal, coconut, cabbage, ragi, tomato","Pitta, Vata",Kapha,"Salty, Sour",energizing,Winter
+Lemon Stuffed Paratha,Lunch,"beetroot, ginger, capsicum, coconut, cabbage","Kapha, Pitta, Vata",,"Sour, Pungent",grounding,All
+Lemon Porridge,Lunch,"peas, beans, cauliflower, garlic, rice","Pitta, Vata",Kapha,"Pungent, Astringent",warming,Winter
+Spicy Salad,Lunch,"potato, pumpkin, millet, coconut, paneer","Kapha, Pitta, Vata",,"Sweet, Sour",grounding,All
+Coconut Snack Mix,Breakfast,"masoor dal, sweet potato, broccoli, lentils, pumpkin","Kapha, Vata",Pitta,"Pungent, Bitter",energizing,Summer
+Coconut Paneer Curry,Snack,"rice, masoor dal, cabbage, moong dal, peas",Pitta,"Kapha, Vata","Bitter, Sour",grounding,Winter
+Coconut Stuffed Paratha,Snack,"rice, onion, sweet potato, oats, tomato","Kapha, Pitta, Vata",,"Bitter, Pungent",energizing,Winter
+Mint Paneer Curry,Lunch,"rice, moong dal, broccoli, garlic, ragi",Pitta,"Kapha, Vata","Sweet, Bitter",energizing,Monsoon
+Mixed Veg Biryani,Breakfast,"oats, sweet potato, capsicum, wheat, masoor dal","Kapha, Pitta, Vata",,"Salty, Sweet",stabilizing,All
+Herbal Poha,Breakfast,"broccoli, ragi, peas, spinach, beetroot","Kapha, Pitta",Vata,"Bitter, Sour",energizing,Winter
+Fresh Sabzi,Lunch,"tomato, pumpkin, wheat, onion, potato","Kapha, Pitta, Vata",,"Astringent, Bitter",energizing,Monsoon
+Seasonal Pulao,Snack,"beetroot, paneer, peas, cabbage, pumpkin","Kapha, Vata",Pitta,"Astringent, Bitter",energizing,Monsoon
+Ayurvedic Veg Stir Fry,Snack,"capsicum, beetroot, tomato, oats, cauliflower","Kapha, Pitta, Vata",,"Pungent, Salty",energizing,Summer
+Mild Vegetable Curry,Dinner,"wheat, toor dal, tomato, garlic, lentils",Pitta,"Kapha, Vata","Astringent, Sour",grounding,Summer
+Mixed Veg Rasam,Lunch,"onion, lentils, tomato, toor dal, coconut",Vata,"Kapha, Pitta","Bitter, Salty",warming,Monsoon
+Light Porridge,Dinner,"tomato, cauliflower, broccoli, sweet potato, pumpkin",Vata,"Kapha, Pitta","Bitter, Astringent",energizing,Winter
+Fresh Khichdi,Snack,"carrot, beetroot, sweet potato, toor dal, pumpkin",Vata,"Kapha, Pitta","Sour, Sweet",grounding,Winter
+Mild Lentil Soup,Lunch,"spinach, beans, ragi, oats, paneer",Pitta,"Kapha, Vata","Astringent, Salty",warming,All
+Spicy Porridge,Snack,"millet, broccoli, beetroot, onion, oats","Kapha, Pitta, Vata",,"Sour, Pungent",stabilizing,Summer
+Masala Dosa,Breakfast,"ghee, cauliflower, capsicum, rice, carrot","Kapha, Pitta",Vata,"Sweet, Pungent",grounding,All
+Green Kofta,Lunch,"millet, capsicum, beetroot, wheat, cauliflower","Pitta, Vata",Kapha,"Salty, Astringent",cooling,Winter
+Mint Lentil Soup,Snack,"toor dal, wheat, beans, carrot, millet",Kapha,"Pitta, Vata","Pungent, Salty",energizing,All
+Light Wrap,Lunch,"beans, spinach, peas, tomato, oats","Kapha, Pitta, Vata",,"Astringent, Bitter",grounding,All
+Warming Thali,Dinner,"toor dal, rice, cauliflower, ginger, moong dal",Kapha,"Pitta, Vata","Astringent, Pungent",energizing,Monsoon
+Lemon Sabzi,Lunch,"capsicum, onion, moong dal, ragi, potato","Kapha, Pitta, Vata",,"Sweet, Bitter",stabilizing,Monsoon
+Fresh Wrap,Dinner,"paneer, cauliflower, spinach, millet, moong dal","Kapha, Pitta, Vata",,"Bitter, Astringent",stabilizing,All
+Classic Kadhi,Snack,"capsicum, potato, cabbage, ginger, oats","Kapha, Pitta, Vata",,"Pungent, Sour",cooling,All
+Spicy Stuffed Paratha,Snack,"beetroot, oats, moong dal, beans, cauliflower","Kapha, Pitta, Vata",,"Salty, Bitter",grounding,Winter
+Protein-Rich Poha,Snack,"pumpkin, paneer, sweet potato, moong dal, peas","Pitta, Vata",Kapha,"Sour, Salty",stabilizing,All
+Lemon Thali,Dinner,"tomato, pumpkin, wheat, ragi, coconut","Kapha, Pitta, Vata",,"Salty, Pungent",light,All
+Fresh Lentil Soup,Breakfast,"cauliflower, sweet potato, spinach, coconut, moong dal","Kapha, Pitta, Vata",,"Pungent, Astringent",stabilizing,All
+Light Dal,Breakfast,"beetroot, beans, ghee, capsicum, paneer","Kapha, Vata",Pitta,"Pungent, Sweet",cooling,Monsoon
+Cooling Stuffed Paratha,Snack,"pumpkin, masoor dal, ghee, rice, lentils","Pitta, Vata",Kapha,"Astringent, Sweet",light,Summer
+Ginger Sambar,Lunch,"beans, carrot, potato, paneer, lentils","Kapha, Vata",Pitta,"Astringent, Pungent",stabilizing,All
+Mixed Veg Chutney,Dinner,"ghee, pumpkin, oats, garlic, masoor dal","Kapha, Pitta, Vata",,"Sweet, Salty",energizing,All
+Warming Veg Stir Fry,Dinner,"ghee, cabbage, wheat, peas, rice","Kapha, Pitta, Vata",,"Bitter, Pungent",light,All
+Warming Khichdi,Snack,"coconut, lentils, ginger, tomato, beans","Pitta, Vata",Kapha,"Bitter, Sweet",cooling,Winter
+Garlic Lentil Soup,Dinner,"masoor dal, beans, garlic, cauliflower, coconut","Kapha, Pitta",Vata,"Pungent, Sweet",light,Monsoon
+Coconut Lentil Soup,Breakfast,"masoor dal, cauliflower, beetroot, rice, beans",Kapha,"Pitta, Vata","Astringent, Sour",energizing,Monsoon
+Ginger Dal,Breakfast,"capsicum, ghee, peas, spinach, tomato",Kapha,"Pitta, Vata","Sweet, Salty",cooling,Monsoon
+Green Chutney,Dinner,"toor dal, moong dal, pumpkin, sweet potato, paneer","Kapha, Pitta, Vata",,"Astringent, Pungent",grounding,Monsoon
