@@ -1,10 +1,79 @@
-venv/
+# ---------------------------
+# Python Cache / Bytecode
+# ---------------------------
 __pycache__/
 *.pyc
-instance/
+*.pyo
+*.pyd
+*.pdb
+
+# ---------------------------
+# Virtual Environment
+# ---------------------------
+venv/
+env/
+.venv/
+ENV/
+
+# ---------------------------
+# Environment / Secrets
+# ---------------------------
 .env
+.env.*
+*.env
+apikey.txt
+keys.txt
+secrets.json
+
+# ---------------------------
+# Database Files
+# ---------------------------
+*.sqlite
+*.sqlite3
+*.db
+
+# ---------------------------
+# Machine Learning Files
+# ---------------------------
 *.pkl
 *.joblib
-*.sqlite
-*.db
+*.h5
+*.bin
+
+# ---------------------------
+# IDE / Editor folders
+# ---------------------------
 .vscode/
+.idea/
+
+# ---------------------------
+# Temporary / Logs
+# ---------------------------
+*.log
+*.tmp
+*.cache/
+cache/
+temp/
+
+# ---------------------------
+# Flask Instance Folder
+# ---------------------------
+instance/
+
+# ---------------------------
+# PDF & Generated Reports
+# ---------------------------
+*.pdf
+progress.png
+
+# ---------------------------
+# Uploaded Media (if any)
+# ---------------------------
+uploads/
+scans/
+
+# ---------------------------
+# OS Junk
+# ---------------------------
+.DS_Store
+Thumbs.db
