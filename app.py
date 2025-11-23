@@ -30,7 +30,9 @@ def clear_screen():
 def prompt_enter():
     input("\nPress Enter to continue...")
 
-# --- MAIN APP ---
+# ---------------------------------------------------------
+#                      MAIN APP
+# ---------------------------------------------------------
 def main():
     clear_screen()
     typing_effect("🔄 Booting DietVeda Core Systems...")
@@ -50,19 +52,23 @@ def main():
     time.sleep(0.5)
     clear_screen()
 
-    print("="*60)
+    print("=" * 60)
     print("🌿  D I E T V E D A   I N T E L L I G E N C E  🌿")
-    print("="*60)
+    print("=" * 60)
 
-    # --- PHASE 1: IDENTIFICATION ---
+    # ---------------------------------------------------------
+    #                PHASE 1: IDENTIFICATION
+    # ---------------------------------------------------------
     print("\n[1] New Analysis (Take Quiz)")
-    print("[2] Quick Start (Use 'Vata' Default - For Testing)")
+    print("[2] I Know My Dosha (Manual Entry)")
 
     start_choice = input("\nSelect Option (1-2): ").strip()
-    user_dosha = "Vata"  # Default
+    user_dosha = "Vata"  # fallback default
 
+    # --------------------- QUIZ MODE -------------------------
     if start_choice == "1":
         typing_effect("\n📝 Analyzing Bio-Constitution...")
+
         profile = {
             'digestion': input("   Digestion (fast/slow/moderate): ").strip().lower(),
             'sleep': input("   Sleep (light/deep/moderate): ").strip().lower(),
@@ -82,13 +88,37 @@ def main():
         user_dosha = result.get('dosha', 'Vata')
         typing_effect(f"✨ DIAGNOSIS COMPLETE: You are {result.get('type','')} - {user_dosha.upper()}")
         print(f"   (Confidence: {result.get('confidence','N/A')})")
+
+    # -------------------- MANUAL ENTRY -----------------------
     else:
-        print("\n🚀 Skipping Quiz. Profile set to VATA.")
-        user_dosha = "Vata"
+        print("\n🌿 Enter your dominant dosha manually.")
+
+        valid_doshas = [
+            "vata", "pitta", "kapha",
+            "vata-pitta", "pitta-vata",
+            "pitta-kapha", "kapha-pitta",
+            "vata-kapha", "kapha-vata"
+        ]
+
+        while True:
+            user_dosha = input(
+                "Dosha (Vata / Pitta / Kapha or dual like Vata-Pitta): "
+            ).strip().lower()
+
+            if user_dosha in valid_doshas:
+                break
+            else:
+                print("❌ Invalid dosha. Try again.\n")
+
+        # Format only for display
+        user_dosha = user_dosha.capitalize()
+        print(f"\n✔ Using Dosha: {user_dosha}")
 
     prompt_enter()
 
-    # --- PHASE 2: DASHBOARD LOOP ---
+    # ---------------------------------------------------------
+    #                PHASE 2: DASHBOARD
+    # ---------------------------------------------------------
     while True:
         clear_screen()
         season = diet_engine._get_season() if hasattr(diet_engine, "_get_season") else "Unknown"
@@ -106,7 +136,9 @@ def main():
 
         choice = input("Select Feature (1-7): ").strip()
 
-        # -------- 1. Diet Recommendations --------
+        # ---------------------------------------------------------
+        # 1. Diet Recommendations
+        # ---------------------------------------------------------
         if choice == "1":
             print("\n🥗 DIET PLAN")
             meal = input("Which meal? (Breakfast/Lunch/Dinner — leave blank for All): ").strip()
@@ -119,7 +151,7 @@ def main():
                 print(recs[['dish_name', 'score', 'ingredients']].to_string(index=False))
 
             print("\n[1] Continue")
-            print("[2] Download Full Food Chart (All dishes for your dosha)")
+            print("[2] Download Full Food Chart")
             print("[3] Download Filtered Meal PDF")
             print("[4] Back to Dashboard")
 
@@ -138,22 +170,30 @@ def main():
 
             prompt_enter()
 
-        # -------- 2. Yoga Coach --------
+        # ---------------------------------------------------------
+        # 2. Yoga Coach
+        # ---------------------------------------------------------
         elif choice == "2":
             yoga_engine.start_session(user_dosha)
             prompt_enter()
 
-        # -------- 3. Routine Tracker --------
+        # ---------------------------------------------------------
+        # 3. Routine Tracker
+        # ---------------------------------------------------------
         elif choice == "3":
             routine_engine.start_tracking(user_dosha)
             prompt_enter()
 
-        # -------- 4. Tongue Scanner --------
+        # ---------------------------------------------------------
+        # 4. Tongue Scanner
+        # ---------------------------------------------------------
         elif choice == "4":
             scanner_engine.start_scanning()
             prompt_enter()
 
-        # -------- 5. Analytics --------
+        # ---------------------------------------------------------
+        # 5. Wellness Analytics
+        # ---------------------------------------------------------
         elif choice == "5":
             wa = WellnessAnalytics()
             out = wa.generate_progress_graph(out_path="progress.png")
@@ -163,7 +203,9 @@ def main():
                 print(f"📁 Graph saved as: {out}")
             prompt_enter()
 
-        # -------- 6. CHATBOT --------
+        # ---------------------------------------------------------
+        # 6. Dr. Veda Chatbot
+        # ---------------------------------------------------------
         elif choice == "6":
             from chatbot import DrVedaChatbot
             bot = DrVedaChatbot()
@@ -175,7 +217,6 @@ def main():
 
             while True:
                 user_q = input("\n👤 You: ").strip()
-
                 if user_q.lower() in ("exit", "quit", "back"):
                     print("\nEnding Chat Session...")
                     time.sleep(1)
@@ -188,7 +229,9 @@ def main():
 
             prompt_enter()
 
-        # -------- 7. Exit --------
+        # ---------------------------------------------------------
+        # 7. Exit
+        # ---------------------------------------------------------
         elif choice == "7":
             typing_effect("\n🌿 Shutting down. Live Balanced. 🌿")
             break
