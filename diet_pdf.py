@@ -3,11 +3,13 @@ import os
 import pandas as pd
 
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
 )
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
+from reportlab.lib.units import inch
+from reportlab.pdfgen import canvas
 
 
 # ---------------------------------------------------------
@@ -27,9 +29,39 @@ class DietPDFGenerator:
     # ---------------------------------------------------------
     def filter_by_dosha(self, dosha):
         dosha = dosha.lower()
-        return self.df[self.df["dosha_suitable_for"]
-                       .str.lower()
-                       .str.contains(dosha)]
+        
+        # Handle dual doshas (e.g., "Pitta-Vata" or "Vata-Pitta")
+        if "-" in dosha:
+            doshas = [d.strip() for d in dosha.split("-")]
+            # Create a mask that matches if dish is suitable for ANY of the doshas
+            mask = self.df["dosha_suitable_for"].str.lower().str.contains(doshas[0], na=False)
+            for d in doshas[1:]:
+                mask = mask | self.df["dosha_suitable_for"].str.lower().str.contains(d, na=False)
+            return self.df[mask]
+        else:
+            # Single dosha - simple contains check
+            return self.df[self.df["dosha_suitable_for"]
+                           .str.lower()
+                           .str.contains(dosha, na=False)]
+
+    # ---------------------------------------------------------
+    # MANDALA HEADER FUNCTION
+    # ---------------------------------------------------------
+    def _draw_mandala_header(self, canvas, doc):
+        """Draw mandala-inspired header on each page"""
+        canvas.saveState()
+        # Mandala circle (simplified)
+        canvas.setStrokeColor(colors.HexColor("#B87333"))  # Copper
+        canvas.setLineWidth(2)
+        canvas.circle(4.25*inch, 10.5*inch, 0.3*inch, stroke=1, fill=0)
+        canvas.circle(4.25*inch, 10.5*inch, 0.2*inch, stroke=1, fill=0)
+        
+        # Title with Ayurvedic styling
+        canvas.setFont("Helvetica-Bold", 20)
+        canvas.setFillColor(colors.HexColor("#6B8E6B"))  # Herbal green
+        canvas.drawString(1*inch, 10.7*inch, "🌿 DietVeda 🌿")
+        
+        canvas.restoreState()
 
     # ---------------------------------------------------------
     # FULL FOOD CHART — PREMIUM CARD DESIGN
@@ -43,43 +75,74 @@ class DietPDFGenerator:
         # Save inside folder
         out_path = os.path.join(DOWNLOAD_DIR, out_path)
 
-        pdf = SimpleDocTemplate(out_path, pagesize=letter)
+        pdf = SimpleDocTemplate(out_path, pagesize=letter, 
+                                onFirstPage=self._draw_mandala_header,
+                                onLaterPages=self._draw_mandala_header)
         story = []
 
-        # Title
-        title = f"Diet Chart for {dosha.capitalize()} Dosha"
-        story.append(Paragraph(f"<b>{title}</b>", self.styles["Title"]))
-        story.append(Spacer(1, 20))
+        # Title with Ayurvedic quote
+        title_style = ParagraphStyle(
+            'AyurvedicTitle',
+            parent=self.styles['Title'],
+            fontSize=24,
+            textColor=colors.HexColor("#6B8E6B"),
+            spaceAfter=30,
+            alignment=1  # Center
+        )
+        
+        title = f"<b>🌿 Diet Chart for {dosha.capitalize()} Dosha 🌿</b>"
+        story.append(Paragraph(title, title_style))
+        
+        quote = "<i>\"Balance is the essence of health — Sushruta Samhita\"</i>"
+        story.append(Paragraph(quote, self.styles["Normal"]))
+        story.append(Spacer(1, 30))
 
-        # Card background color
+        # Card background color (soft pastel green)
         card_color = "#E9F7EF"
+        border_color = "#B87333"  # Copper
 
-        # Create card blocks
+        # Create card blocks with enhanced styling
+        card_style = ParagraphStyle(
+            'FoodCard',
+            parent=self.styles['BodyText'],
+            backColor=colors.HexColor(card_color),
+            borderColor=colors.HexColor(border_color),
+            borderWidth=2,
+            borderPadding=12,
+            leftIndent=12,
+            rightIndent=12,
+            spaceBefore=15,
+            spaceAfter=15
+        )
+        
         for _, row in data.iterrows():
+            dish_name = row.get('dish_name', 'Unknown Dish')
+            ingredients = row.get('ingredients', 'N/A')
+            suitable = row.get('dosha_suitable_for', 'N/A')
+            avoids = row.get('avoids_for', 'N/A')
+            taste = row.get('taste_profile', 'N/A')
+            effect = row.get('effect', 'N/A')
+            season = row.get('season', 'N/A')
 
             block = f"""
-            <para backColor="{card_color}" 
-                  spaceBefore="10" spaceAfter="10"
-                  leftIndent="8" rightIndent="8">
+            <para>
+                <font size=16 color="#6B8E6B"><b>🌿 {dish_name}</b></font><br/><br/>
 
-                <font size=14><b>{row['dish_name']}</b></font><br/><br/>
+                <font size=11 color="#3D2817">
+                <b>Ingredients:</b> {ingredients}<br/><br/>
 
-                <font size=10>
-                <b>Ingredients:</b> {row['ingredients']}<br/><br/>
+                <b>Suitable For:</b> <font color="#6B8E6B">{suitable}</font><br/>
+                <b>Avoids For:</b> {avoids}<br/><br/>
 
-                <b>Suitable For:</b> {row['dosha_suitable_for']}<br/>
-                <b>Avoids For:</b> {row['avoids_for']}<br/><br/>
-
-                <b>Taste Profile:</b> {row['taste_profile']}<br/>
-                <b>Effect:</b> {row['effect']}<br/>
-                <b>Season:</b> {row['season']}<br/>
+                <b>Taste Profile:</b> {taste}<br/>
+                <b>Effect:</b> {effect}<br/>
+                <b>Season:</b> {season}<br/>
                 </font>
-
             </para>
             """
 
-            story.append(Paragraph(block, self.styles["BodyText"]))
-            story.append(Spacer(1, 12))
+            story.append(Paragraph(block, card_style))
+            story.append(Spacer(1, 15))
 
         pdf.build(story)
 
@@ -92,53 +155,79 @@ class DietPDFGenerator:
         return os.path.abspath(out_path)
 
     # ---------------------------------------------------------
-    # FILTERED MEAL PDF — TABLE FORMAT
+    # FILTERED MEAL PDF — TABLE FORMAT WITH AYURVEDIC STYLING
     # ---------------------------------------------------------
     def generate_filtered_pdf(self, df, dosha, meal, out_path="filtered_meal.pdf"):
-
+        """
+        Generate PDF from a pre-filtered DataFrame (from recommend() method)
+        This ensures PDF matches what's shown in the UI
+        """
         if df.empty:
             raise ValueError("No filtered dishes to export.")
 
         # Save inside folder
         out_path = os.path.join(DOWNLOAD_DIR, out_path)
 
-        pdf = SimpleDocTemplate(out_path, pagesize=letter)
+        pdf = SimpleDocTemplate(out_path, pagesize=letter,
+                                onFirstPage=self._draw_mandala_header,
+                                onLaterPages=self._draw_mandala_header)
         story = []
 
-        title = f"{meal} Recommendations for {dosha.capitalize()} Dosha"
-        story.append(Paragraph(f"<b>{title}</b>", self.styles["Title"]))
-        story.append(Spacer(1, 20))
+        # Enhanced title
+        title_style = ParagraphStyle(
+            'MealTitle',
+            parent=self.styles['Title'],
+            fontSize=22,
+            textColor=colors.HexColor("#6B8E6B"),
+            spaceAfter=20,
+            alignment=1
+        )
+        
+        title = f"<b>🥗 {meal} Recommendations for {dosha.capitalize()} Dosha 🥗</b>"
+        story.append(Paragraph(title, title_style))
+        story.append(Spacer(1, 25))
 
-        # Table header
-        table_data = [["Dish Name", "Ingredients", "Score"]]
+        # Table header (removed Score column)
+        table_data = [["Dish Name", "Ingredients", "Season"]]
 
         # Add all rows
         for _, row in df.iterrows():
             table_data.append([
-                row["dish_name"],
-                row["ingredients"],
-                str(row["score"])
+                row.get("dish_name", "Unknown"),
+                row.get("ingredients", "N/A"),
+                row.get("season", "All")
             ])
 
-        # Table design
-        table = Table(table_data, colWidths=[150, 300, 50])
+        # Table design with Ayurvedic colors
+        table = Table(table_data, colWidths=[200, 350, 100])
 
         table.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#cfe8ff")),
-            ("TEXTCOLOR", (0, 0), (-1, 0), colors.black),
+            # Header row
+            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#6B8E6B")),  # Herbal green
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
             ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-            ("FONTSIZE", (0, 0), (-1, 0), 11),
+            ("FONTSIZE", (0, 0), (-1, 0), 12),
+            
+            # Data rows - alternating colors
+            ("BACKGROUND", (0, 1), (-1, -1), colors.HexColor("#E9F7EF")),  # Soft green
+            ("TEXTCOLOR", (0, 1), (-1, -1), colors.HexColor("#3D2817")),
+            ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
+            ("FONTSIZE", (0, 1), (-1, -1), 10),
 
             ("ALIGN", (0, 0), (-1, -1), "LEFT"),
-            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
 
-            ("GRID", (0, 0), (-1, -1), 0.4, colors.grey),
-            ("BOX", (0, 0), (-1, -1), 1, colors.black),
+            # Borders with copper color
+            ("GRID", (0, 0), (-1, -1), 1.5, colors.HexColor("#B87333")),  # Copper
+            ("BOX", (0, 0), (-1, -1), 2, colors.HexColor("#B87333")),
 
-            ("LEFTPADDING", (0, 0), (-1, -1), 6),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-            ("TOPPADDING", (0, 0), (-1, -1), 4),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+            ("LEFTPADDING", (0, 0), (-1, -1), 10),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 10),
+            ("TOPPADDING", (0, 0), (-1, -1), 8),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
+            
+            # Row striping
+            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.HexColor("#E9F7EF"), colors.white]),
         ]))
 
         story.append(table)

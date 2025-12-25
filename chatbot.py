@@ -4,22 +4,15 @@ import os
 
 class DrVedaChatbot:
     def __init__(self):
-        # --------------------------
-        # 1. API KEY CONFIGURATION
-        # --------------------------
-        # IMPORTANT:
-        # Replace "YOUR_KEY_HERE" with your actual Gemini API key.
-        # OR set an environment variable:  setx GEMINI_API_KEY "your_key"
-        self.api_key = "AIzaSyAI8IkOTQ04mP_0XSQ7JZySI9jf5SqFv_8"
+        
+        self.api_key = "API-KEY"
 
         self.is_active = False
 
         try:
             genai.configure(api_key=self.api_key)
 
-            # --------------------------
-            # 2. MODEL USED
-            # --------------------------
+          
             self.model = genai.GenerativeModel("gemini-2.0-flash")
 
             self.is_active = True
@@ -36,9 +29,7 @@ class DrVedaChatbot:
         if not self.is_active:
             return "❌ Dr. Veda is offline. Please check your Gemini API key."
 
-        # --------------------------
-        # SYSTEM / PERSONA PROMPT
-        # --------------------------
+        
         prompt = f"""
         You are Dr. Veda — an Ayurvedic physician with 20+ years experience.
 

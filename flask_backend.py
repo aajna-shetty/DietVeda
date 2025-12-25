@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, send_file
 from flask_cors import CORS
 from analytics import WellnessAnalytics
 import sys
@@ -31,16 +31,49 @@ try:
 except Exception as e:
     print(f"❌ Initialization Failed: {e}")
 
-# --- API ENDPOINTS (The "Menu" for your Frontend) ---
+# --- WEB ROUTES (HTML Templates) ---
 
 @app.route('/')
 def home():
-    """Simple check to see if server is running"""
-    return jsonify({
-        "status": "Online", 
-        "project": "DietVeda AI", 
-        "version": "1.0"
-    })
+    """Home dashboard"""
+    return render_template('home.html')
+
+@app.route('/dosha')
+def dosha_diagnosis():
+    """Dosha diagnosis page"""
+    return render_template('dosha_diagnosis.html')
+
+@app.route('/diet')
+def diet_recommendations():
+    """Diet recommendations page"""
+    return render_template('diet_recommendations.html')
+
+@app.route('/tongue')
+def tongue_scanner():
+    """Tongue scanner page"""
+    return render_template('tongue_scanner.html')
+
+@app.route('/routine')
+def routine_tracker():
+    """Routine tracker page"""
+    return render_template('routine_tracker.html')
+
+@app.route('/analytics')
+def analytics():
+    """Analytics page"""
+    return render_template('analytics.html')
+
+@app.route('/yoga')
+def yoga_coach():
+    """Yoga coach page"""
+    return render_template('yoga_coach.html')
+
+@app.route('/chatbot')
+def chatbot():
+    """Dr. Veda chatbot page"""
+    return render_template('chatbot.html')
+
+# --- API ENDPOINTS (The "Menu" for your Frontend) ---
 
 @app.route('/predict_dosha', methods=['POST'])
 def predict_dosha():
@@ -71,6 +104,25 @@ def get_diet():
         
         if recommendations.empty:
             return jsonify([])
+        
+        # Rename dish_type to meal_type for consistency in frontend
+        if 'dish_type' in recommendations.columns:
+            recommendations = recommendations.rename(columns={'dish_type': 'meal_type'})
+        
+        # Remove score column if it exists (we don't want to show scores)
+        if 'score' in recommendations.columns:
+            recommendations = recommendations.drop(columns=['score'])
+        
+        # Select only the columns we want to send to frontend
+        columns_to_include = ['dish_name', 'ingredients', 'season', 'meal_type']
+        # Add optional columns if they exist
+        optional_columns = ['taste_profile', 'effect', 'dosha_suitable_for']
+        for col in optional_columns:
+            if col in recommendations.columns:
+                columns_to_include.append(col)
+        
+        available_columns = [col for col in columns_to_include if col in recommendations.columns]
+        recommendations = recommendations[available_columns]
         
         # Convert Pandas DataFrame to JSON
         return jsonify(recommendations.to_dict(orient='records'))
@@ -125,16 +177,92 @@ def get_routine():
 
 @app.route('/analytics/graph')
 def analytics_graph():
-    wa = WellnessAnalytics()
-    path = wa.generate_progress_graph(out_path="progress.png")
-    if path and os.path.exists(path):
-        return send_file(path, mimetype='image/png')
-    return jsonify({"error":"no-data"}), 404
+    """Generate and return progress graph"""
+    try:
+        wa = WellnessAnalytics()
+        path = wa.generate_progress_graph(out_path="progress.png")
+        if path and os.path.exists(path):
+            return send_file(path, mimetype='image/png')
+        # Fallback to existing file if generation fails
+        if os.path.exists("progress.png"):
+            return send_file("progress.png", mimetype='image/png')
+        return jsonify({"error":"no-data"}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/analytics/insights')
 def analytics_insights():
     wa = WellnessAnalytics()
     return jsonify({"insights": wa.generate_insights()})
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    """
+    Frontend sends: { "question": "Is curd good for dinner?", "dosha": "Vata" }
+    Backend replies: { "response": "..." }
+    """
+    try:
+        from chatbot import DrVedaChatbot
+        bot = DrVedaChatbot()
+        
+        data = request.json
+        question = data.get('question', '')
+        dosha = data.get('dosha', 'Tridoshic')
+        
+        if not question:
+            return jsonify({"error": "Question is required"}), 400
+        
+        response = bot.ask_dr_veda(question, dosha)
+        return jsonify({"response": response})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/download/full/<dosha>')
+def download_full(dosha):
+    """Download full diet chart PDF"""
+    try:
+        from diet_pdf import DietPDFGenerator
+        generator = DietPDFGenerator("dishes_dataset.csv")
+        path = generator.generate_full_chart(dosha, "full_chart.pdf")
+        return send_file(path, as_attachment=True, download_name=f"dietveda_full_{dosha}.pdf")
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/download/filtered/<dosha>/<meal>')
+def download_filtered(dosha, meal):
+    """Download filtered meal PDF - uses same filtering as UI"""
+    try:
+        from diet_pdf import DietPDFGenerator
+        import pandas as pd
+        
+        # Use the SAME filtering logic as the UI (recommend() method)
+        # This ensures PDF contains only the foods shown in the UI
+        meal_type = '' if meal.lower() == 'all' else meal
+        recommendations = diet_engine.recommend(dosha, meal_type=meal_type)
+        
+        if recommendations.empty:
+            return jsonify({"error": f"No dishes found for dosha: {dosha} and meal: {meal}"}), 404
+        
+        # Rename dish_type to meal_type for consistency
+        if 'dish_type' in recommendations.columns:
+            recommendations = recommendations.rename(columns={'dish_type': 'meal_type'})
+        
+        # Generate PDF with the filtered recommendations
+        generator = DietPDFGenerator("dishes_dataset.csv")
+        
+        # Generate unique filename to avoid conflicts
+        import time
+        filename = f"filtered_{dosha.replace('-', '_')}_{meal}_{int(time.time())}.pdf"
+        path = generator.generate_filtered_pdf(recommendations, dosha, meal, filename)
+        
+        if not os.path.exists(path):
+            return jsonify({"error": "PDF generation failed"}), 500
+            
+        return send_file(path, as_attachment=True, download_name=f"dietveda_{dosha}_{meal}.pdf", mimetype='application/pdf')
+    except Exception as e:
+        import traceback
+        print(f"PDF Error: {traceback.format_exc()}")
+        return jsonify({"error": str(e)}), 500
 
 
 # --- START SERVER ---

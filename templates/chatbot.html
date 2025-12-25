@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}🤖 Dr. Veda Chatbot — DietVeda{% endblock %}
+
+{% block content %}
+<div class="chatbot-page">
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="guru-icon">🧘‍♂️</div>
+                <h1 style="color: var(--herbal-green); margin-bottom: 0.5rem;">Dr. Veda</h1>
+                <p style="color: var(--text-medium);">Your Ayurvedic Guru</p>
+                <div class="oil-lamp">🪔</div>
+            </div>
+
+            <!-- Dosha Selection -->
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <label for="dosha-select" style="font-size: 1rem; color: var(--text-dark); margin-right: 0.5rem;">Your Dosha:</label>
+                <select id="dosha-select" style="padding: 0.5rem 1rem; font-size: 1rem; border: 2px solid var(--copper); border-radius: 10px; background: white;">
+                    <option value="Vata">Vata</option>
+                    <option value="Pitta">Pitta</option>
+                    <option value="Kapha">Kapha</option>
+                </select>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <p>🌿 Namaste! I am Dr. Veda, your Ayurvedic guide. How may I assist you on your wellness journey today?</p>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Ask me about food, lifestyle, or wellness..." onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+{% endblock %}
+

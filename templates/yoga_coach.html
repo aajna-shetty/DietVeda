@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}🧘 Yoga Coach — DietVeda{% endblock %}
+
+{% block content %}
+<div class="yoga-page">
+    <div class="container">
+        <div class="yoga-header">
+            <h1 style="color: var(--herbal-green); margin-bottom: 1rem;">🧘 Yoga Coach</h1>
+            <p style="font-size: 1.2rem; color: var(--text-medium);">A calm meditation space</p>
+        </div>
+
+        <!-- Dosha Selection -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <label for="dosha-select" style="font-size: 1.2rem; color: var(--text-dark); margin-right: 1rem;">Your Dosha:</label>
+            <select id="dosha-select" style="padding: 0.8rem 1.5rem; font-size: 1.1rem; border: 2px solid var(--copper); border-radius: 10px; background: white;">
+                <option value="Vata">Vata</option>
+                <option value="Pitta">Pitta</option>
+                <option value="Kapha">Kapha</option>
+            </select>
+        </div>
+
+        <div id="poses-container">
+            <!-- Yoga poses will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/yoga.js') }}"></script>
+{% endblock %}
+

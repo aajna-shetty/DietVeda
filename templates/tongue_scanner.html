@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}📸 Tongue Scanner — DietVeda{% endblock %}
+
+{% block content %}
+<div class="scanner-page">
+    <div class="container">
+        <h1 class="scanner-title">📸 Loha Patrika Tongue Scan</h1>
+        <p class="scanner-subtitle">Ayurvedic practitioner gently examining your tongue</p>
+
+        <div class="webcam-container">
+            <video id="videoElement" width="640" height="480" autoplay></video>
+            <div class="scan-box" id="scan-box" style="display: none;"></div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <button class="btn-primary" id="start-scan-btn">Start Scanning</button>
+            <button class="btn-secondary" id="stop-scan-btn" style="display: none;">Stop Scanning</button>
+        </div>
+
+        <div class="diagnosis-overlay" id="diagnosis-overlay" style="display: none;">
+            <h2 style="color: var(--herbal-green); margin-bottom: 1rem;">Detecting Dosha Imbalance…</h2>
+            <div class="diagnosis-label" id="diagnosis-label"></div>
+            
+            <div class="color-readings">
+                <div class="color-box">
+                    <div style="font-size: 0.9rem; color: var(--text-medium);">Red</div>
+                    <div class="color-value" id="r-value">0</div>
+                </div>
+                <div class="color-box">
+                    <div style="font-size: 0.9rem; color: var(--text-medium);">Green</div>
+                    <div class="color-value" id="g-value">0</div>
+                </div>
+                <div class="color-box">
+                    <div style="font-size: 0.9rem; color: var(--text-medium);">Blue</div>
+                    <div class="color-value" id="b-value">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/scanner.js') }}"></script>
+{% endblock %}
+

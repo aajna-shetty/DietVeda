@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}🥗 Diet Recommendations — DietVeda{% endblock %}
+
+{% block content %}
+<div class="diet-page">
+    <div class="container">
+        <div class="diet-header">
+            <h1 style="color: var(--herbal-green); margin-bottom: 1rem;">🥗 Ayurvedic Food Recommendations</h1>
+            <p style="font-size: 1.2rem; color: var(--text-medium);">Handcrafted menu from an Ayurvedic retreat</p>
+        </div>
+
+        <!-- Dosha Selection -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <label for="dosha-select" style="font-size: 1.2rem; color: var(--text-dark); margin-right: 1rem;">Your Dosha:</label>
+            <select id="dosha-select" style="padding: 0.8rem 1.5rem; font-size: 1.1rem; border: 2px solid var(--copper); border-radius: 10px; background: white;">
+                <option value="Vata">Vata</option>
+                <option value="Pitta">Pitta</option>
+                <option value="Kapha">Kapha</option>
+                <option value="Vata-Pitta">Vata-Pitta</option>
+                <option value="Pitta-Kapha">Pitta-Kapha</option>
+                <option value="Vata-Kapha">Vata-Kapha</option>
+            </select>
+        </div>
+
+        <!-- Meal Filter -->
+        <div class="meal-filter">
+            <button class="meal-btn active" data-meal="All">All Meals</button>
+            <button class="meal-btn" data-meal="Breakfast">🌅 Breakfast</button>
+            <button class="meal-btn" data-meal="Lunch">☀️ Lunch</button>
+            <button class="meal-btn" data-meal="Dinner">🌙 Dinner</button>
+            <button class="meal-btn" data-meal="Snack">🍎 Snacks</button>
+        </div>
+
+        <!-- Food Cards -->
+        <div class="food-cards" id="food-cards">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Download Button -->
+        <button class="download-btn" id="download-btn" style="display: none;">
+            📄 Download Ayurvedic Food Chart (PDF)
+        </button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/diet.js') }}"></script>
+{% endblock %}
+

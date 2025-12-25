@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}🌿 DietVeda — Home{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="hero-title">🌿 DietVeda Intelligence System 🌿</h1>
+    <p class="hero-subtitle">Ancient Ayurveda × Modern AI — Your Path to Perfect Balance</p>
+    
+    <div class="feature-cards">
+        <div class="feature-card" onclick="window.location.href='{{ url_for('dosha_diagnosis') }}'">
+            <span class="feature-icon">🔮</span>
+            <h3>Dosha Diagnosis</h3>
+            <p>Discover your unique Ayurvedic constitution through an intelligent analysis of your body, mind, and lifestyle patterns.</p>
+        </div>
+        
+        <div class="feature-card" onclick="window.location.href='{{ url_for('diet_recommendations') }}'">
+            <span class="feature-icon">🥗</span>
+            <h3>Food & Lifestyle Recommendations</h3>
+            <p>Receive personalized dietary guidance tailored to your dosha, season, and wellness goals.</p>
+        </div>
+        
+        <div class="feature-card" onclick="window.location.href='{{ url_for('yoga_coach') }}'">
+            <span class="feature-icon">🧘</span>
+            <h3>Wellness & Yoga Guidance</h3>
+            <p>Access curated yoga sequences, meditation practices, and lifestyle routines for optimal balance.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

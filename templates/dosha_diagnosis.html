@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}🔮 Dosha Diagnosis — DietVeda{% endblock %}
+
+{% block content %}
+<div class="dosha-page">
+    <div class="container">
+        <h1 style="text-align: center; color: var(--herbal-green); margin-bottom: 2rem;">🔮 Dosha Diagnosis</h1>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--text-medium); margin-bottom: 3rem;">
+            Discover your unique Ayurvedic constitution through intelligent analysis
+        </p>
+
+        <!-- Question Cards -->
+        <div id="quiz-container">
+            <!-- Questions will be dynamically inserted here -->
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="lotus-progress">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+            </div>
+            <p id="progress-text" style="margin-top: 1rem; color: var(--text-medium);">Question 0 of 6</p>
+        </div>
+
+        <!-- Results Card (Hidden Initially) -->
+        <div id="results-card" class="dosha-result-card" style="display: none;">
+            <div class="dosha-mandala" id="dosha-mandala">🌿</div>
+            <h2 class="dosha-type" id="dosha-type"></h2>
+            <p id="dosha-description" style="font-size: 1.2rem; color: var(--text-medium); margin: 1rem 0;"></p>
+            
+            <div class="confidence-ring">
+                <svg width="150" height="150">
+                    <circle cx="75" cy="75" r="70" fill="none" stroke="var(--bg-herbal)" stroke-width="10"/>
+                    <circle cx="75" cy="75" r="70" fill="none" stroke="var(--golden)" stroke-width="10" 
+                            stroke-dasharray="440" stroke-dashoffset="0" id="confidence-circle"/>
+                </svg>
+                <div class="confidence-text" id="confidence-text">0%</div>
+            </div>
+
+            <div class="ayurvedic-quote">
+                "Balance is the essence of health — Sushruta Samhita"
+            </div>
+
+            <button class="btn-primary" onclick="window.location.href='{{ url_for('diet_recommendations') }}'" style="margin-top: 2rem;">
+                Get Diet Recommendations
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/dosha.js') }}"></script>
+{% endblock %}
+
