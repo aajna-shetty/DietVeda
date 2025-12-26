@@ -109,6 +109,19 @@ async function submitQuiz() {
         
         const result = await response.json();
         displayResults(result);
+        
+        // Save quiz result to analytics database
+        if (result.dosha && result.confidence) {
+            const confidenceNum = parseInt(result.confidence);
+            await fetch('http://localhost:5000/save_quiz_score', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dosha: result.dosha,
+                    score: confidenceNum  // Use confidence as wellness score
+                })
+            });
+        }
     } catch (error) {
         console.error('Error:', error);
         document.getElementById('quiz-container').innerHTML = 

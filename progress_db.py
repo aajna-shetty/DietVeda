@@ -25,11 +25,15 @@ class ProgressDB:
         self.conn.commit()
 
     def get_last_30_days(self):
+        """Get all scores from the last 30 days"""
+        today = datetime.date.today()
+        thirty_days_ago = today - datetime.timedelta(days=30)
+        
         query = """
         SELECT date, dosha, score 
         FROM progress
-        ORDER BY date ASC
-        LIMIT 30;
+        WHERE date >= ?
+        ORDER BY date ASC;
         """
-        cursor = self.conn.execute(query)
+        cursor = self.conn.execute(query, (str(thirty_days_ago),))
         return cursor.fetchall()

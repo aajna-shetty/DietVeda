@@ -146,8 +146,15 @@ function calculateScore() {
     rankBadge.textContent = rank;
     rankBadge.className = 'rank-badge ' + rankClass;
     
-    // Save to backend (if endpoint exists)
-    // fetch('http://localhost:5000/save_score', { ... });
+    // Save to backend
+    fetch('http://localhost:5000/save_routine_score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            dosha: dosha,
+            score: percentage
+        })
+    }).catch(err => console.error('Error saving score:', err));
     
     // Scroll to score
     scoreDisplay.scrollIntoView({ behavior: 'smooth' });

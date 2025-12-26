@@ -88,6 +88,36 @@ def predict_dosha():
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
+@app.route('/save_quiz_score', methods=['POST'])
+def save_quiz_score():
+    """Save dosha quiz score to analytics database"""
+    try:
+        from progress_db import ProgressDB
+        data = request.json
+        dosha = data.get('dosha', 'Unknown')
+        score = data.get('score', 0)
+        
+        db = ProgressDB()
+        db.save_score(dosha, score)
+        return jsonify({"status": "saved"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/save_routine_score', methods=['POST'])
+def save_routine_score():
+    """Save routine tracker score to analytics database"""
+    try:
+        from progress_db import ProgressDB
+        data = request.json
+        dosha = data.get('dosha', 'Unknown')
+        score = data.get('score', 0)
+        
+        db = ProgressDB()
+        db.save_score(dosha, score)
+        return jsonify({"status": "saved"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/get_diet', methods=['POST'])
 def get_diet():
     """
