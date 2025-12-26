@@ -5,7 +5,7 @@ import os
 class DrVedaChatbot:
     def __init__(self):
         
-        self.api_key = "API-KEY"
+        self.api_key = "AIzaSyCXqR1YoWxQCqKCaqfhZFIWBQXjbZyqeQo"
 
         self.is_active = False
 
